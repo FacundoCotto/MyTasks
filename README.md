@@ -20,20 +20,21 @@ Sigue estos pasos para levantar el proyecto completo:
 
 ### 1. Clonar el repositorio
 
-\`\`\`bash
+```bash
 git clone <url-del-repositorio>
 cd MyTasks
-\`\`\`
+```
 
 ### 2. Configurar el Backend
 
-\`\`\`bash
+```bash
 cd my-tasks-backend
 npm install
-\`\`\`
+```
 
-Crea un archivo \`.env\` en \`my-tasks-backend/\` con las siguientes variables (ejemplo):
-\`\`\`env
+Crea un archivo `.env` en `my-tasks-backend/` con las siguientes variables (ejemplo):
+
+```env
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/mytasks
 JWT_SECRET=tu_secreto_super_seguro
@@ -43,33 +44,37 @@ EMAIL_PASS=tu_password_aplicacion
 frontend_URL=http://localhost:5173
 email_contact_url=https://api.emailjs.com/api/v1.0/email/send-form
 access_key=tu_key_emailjs
-\`\`\`
+```
 
 Ejecutar servidor:
-\`\`\`bash
+
+```bash
 npm run dev
-\`\`\`
+```
 
 ### 3. Configurar el Frontend
 
 En una nueva terminal:
-\`\`\`bash
+
+```bash
 cd my-tasks-front
 npm install
-\`\`\`
+```
 
-Crea un archivo \`.env\` en \`my-tasks-front/\` (o usa las variables de entorno de Vite):
-\`\`\`env
+Crea un archivo `.env` en `my-tasks-front/` (o usa las variables de entorno de Vite):
+
+```env
 VITE_API_URL=http://localhost:3000/api
 VITE_EMAIL_JS_SERVICE_ID=service_id
 VITE_EMAIL_JS_TEMPLATE_ID=template_id
 VITE_EMAIL_JS_PUBLIC_KEY=public_key
-\`\`\`
+```
 
 Ejecutar cliente:
-\`\`\`bash
+
+```bash
 npm run dev
-\`\`\`
+```
 
 ## 🌟 Funcionalidades Principales
 
@@ -80,8 +85,8 @@ npm run dev
 
 ## 📄 Estructura del Proyecto
 
-- \`/my-tasks-backend\`: API RESTful con arquitectura modular (Controllers, Services, Models).
-- \`/my-tasks-front\`: SPA con React, estructurada por módulos (Auth, Tasks, Admin).
+- `/my-tasks-backend`: API RESTful con arquitectura modular (Controllers, Services, Models).
+- `/my-tasks-front`: SPA con React, estructurada por módulos (Auth, Tasks, Admin).
 
 ---
 
