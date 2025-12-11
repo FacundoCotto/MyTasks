@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { zoomInVariants } from "../../ui/components/animation";
 import { Input } from "../../ui/components/Input";
 import { TextArea } from "../../ui/components/TextArea";
 import { useState } from "react";
@@ -57,7 +56,18 @@ function ContactForm() {
     <motion.form
       initial="view"
       whileInView="visible"
-      variants={zoomInVariants}
+      variants={{
+        hidden: { scale: 0.5, opacity: 0 },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            staggerChildren: 2,
+            duration: 1.2,
+            ease: "easeOut",
+          },
+        },
+      }}
       className="flex flex-col justify-center items-start gap-4 w-full "
       onSubmit={handleSubmit}
     >
@@ -113,7 +123,18 @@ function ContactForm() {
       </div>
 
       <motion.button
-        variants={zoomInVariants}
+        variants={{
+          hidden: { scale: 0.5, opacity: 0 },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              staggerChildren: 2,
+              duration: 1.2,
+              ease: "easeOut",
+            },
+          },
+        }}
         type="submit"
         className="bg-violet-500 hover:bg-violet-600 text-white px-10 py-4 font-bold rounded-lg w-full cursor-pointer"
       >

@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { slideUpVariants } from "../../ui/components/animation"
 import ContactForm from "../components/ContactForm";
-;
 function Contact() {
   return (
     <div
@@ -12,29 +10,89 @@ function Contact() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={slideUpVariants}
+          variants={{
+            hidden: { y: 50, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                staggerChildren: 2,
+                duration: 1.5,
+                ease: "easeOut",
+              },
+            },
+          }}
           className="lg:w-[60%] w-full flex flex-col justify-center items-start gap-6"
         >
           <motion.h1
-            variants={slideUpVariants}
+            variants={{
+              hidden: { y: 50, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 2,
+                  duration: 1.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
             className="text-center mt-6 block text-[40px] md:text-4xl font-bold  text-[#7c3aed] bg-linear-to-r 
             from-violet-500 via-violet-600 to-violet-700 bg-clip-text drop-shadow-2xl italic uppercase"
           >
             Contact Us
           </motion.h1>
           <motion.h1
-            variants={slideUpVariants}
+            variants={{
+              hidden: { y: 50, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 2,
+                  duration: 1.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
             className="text-black uppercase text-[40px] font-bold"
           >
             Reach out to us for any questions or feedback.
           </motion.h1>
           <motion.div
-            variants={slideUpVariants}
+            variants={{
+              hidden: { y: 50, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 2,
+                  duration: 1.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
             className="w-[120px] h-[6px] bg-violet-500"
           />
         </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" variants={slideUpVariants} className="lg:w-[40%] w-full flex flex-col justify-center items-start gap-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { y: 50, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                staggerChildren: 2,
+                duration: 1.5,
+                ease: "easeOut",
+              },
+            },
+          }}
+          className="lg:w-[40%] w-full flex flex-col justify-center items-start gap-6"
+        >
           <ContactForm />
         </motion.div>
       </div>

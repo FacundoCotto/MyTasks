@@ -1,12 +1,10 @@
 import { Btn } from "../../ui/components/Btn";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { slideUpVariants, zoomInVariants } from "../../ui/components/animation";
 
 function Hero() {
   const navigate = useNavigate();
 
-  
   const handleGetStarted = () => {
     navigate("/auth");
   };
@@ -20,14 +18,36 @@ function Hero() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        variants={slideUpVariants}
+        variants={{
+          hidden: { y: 50, opacity: 0 },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+              staggerChildren: 2,
+              duration: 1.5,
+              ease: "easeOut",
+            },
+          },
+        }}
         className=" text-center relative z-10 h-full flex mt-32 justify-center"
       >
         <div className="mb-8">
           <motion.h1
             initial="hidden"
             whileInView="visible"
-            variants={slideUpVariants}
+            variants={{
+              hidden: { y: 50, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 2,
+                  duration: 1.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
             className="mb-4"
           >
             <span
@@ -44,7 +64,18 @@ function Hero() {
           <motion.p
             initial="hidden"
             whileInView="visible"
-            variants={slideUpVariants}
+            variants={{
+              hidden: { y: 50, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 2,
+                  duration: 1.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
             className="mb-8 animate-pulse text-lg md:text-xl text-violet-500 font-light max-w-2xl"
           >
             Create, organize, and manage your tasks effortlessly. Features
@@ -56,7 +87,18 @@ function Hero() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            variants={zoomInVariants}
+            variants={{
+              hidden: { scale: 0.5, opacity: 0 },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 2,
+                  duration: 1.2,
+                  ease: "easeOut",
+                },
+              },
+            }}
             className="flex items-center justify-center"
           >
             <Btn variant="motion" {...{ onClick: handleGetStarted }}>
