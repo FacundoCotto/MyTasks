@@ -1,0 +1,8 @@
+export const env = {
+  API_URL: import.meta.env.VITE_API_URL,
+  ACCESS_KEY: import.meta.env.VITE_ACCESS_KEY,
+  EMAIL_CONTACT_URL: import.meta.env.VITE_EMAIL_CONTACT_URL,
+  TOKEN_STORAGE_KEY: import.meta.env.VITE_TOKEN_STORAGE_KEY,
+  USER_STORAGE_KEY: import.meta.env.VITE_USER_STORAGE_KEY,
+  REFRESH_TOKEN_STORAGE_KEY: import.meta.env.VITE_REFRESH_TOKEN_STORAGE_KEY,
+};
