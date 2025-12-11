@@ -1,13 +1,9 @@
 # MyTasks Project
 
-Proyecto Fullstack de Gestión de Tareas y Usuarios desarrollado con el stack MERN (MongoDB, Express, React, Node.js).
-Este proyecto incluye funcionalidades completas de autenticación (JWT, 2FA), roles de usuario (Admin/User), y un CRUD completo de tareas con una interfaz moderna y responsiva.
-
 ## 🚀 Tecnologías
 
 - **Frontend**: React 19, Vite, TailwindCSS v4, React Router v7, Zustand/Context API, Framer Motion.
 - **Backend**: Node.js, Express v5, Mongoose v9 (MongoDB), TypeScript, Zod (Validación), JWT.
-- **Herramientas**: GitKraken (Gestión de versiones), Swagger (Documentación API).
 
 ## 📋 Requisitos Previos
 
@@ -32,18 +28,28 @@ cd my-tasks-backend
 npm install
 ```
 
-Crea un archivo `.env` en `my-tasks-backend/` con las siguientes variables (ejemplo):
+Cambia el archvo `.env.example` a `.env` en `my-tasks-backend/` con las siguientes variables:
 
 ```env
-PORT=3000
-MONGO_URI=mongodb://localhost:27017/mytasks
-JWT_SECRET=tu_secreto_super_seguro
-JWT_REFRESH_SECRET=tu_secreto_refresh
-EMAIL_USER=tu_email@gmail.com
-EMAIL_PASS=tu_password_aplicacion
-frontend_URL=http://localhost:5173
-email_contact_url=https://api.emailjs.com/api/v1.0/email/send-form
-access_key=tu_key_emailjs
+NODE_ENV=tu_node_env
+PORT=tu_port
+DOMAIN=tu_domain
+MONGO_URI=tu_mongo_uri
+
+# EmailJS configuration
+EMAIL_JS_SERVICE_ID=tu_service_id_emailjs
+EMAIL_JS_WELCOME_TEMPLATE_ID=tu_welcome_template_id_emailjs
+EMAIL_JS_LOGIN_TEMPLATE_ID=tu_login_template_id_emailjs
+EMAIL_JS_PUBLIC_KEY=tu_public_key_emailjs
+EMAIL_JS_PRIVATE_KEY=tu_private_key_emailjs
+EMAIL_JS_URL="https://api.emailjs.com/api/v1.0/email/send"
+
+#JWT Configuration
+JWT_SECRET=tu_secret_jwt
+JWT_REFRESH_SECRET=tu_refresh_secret_jwt
+TWO_FA_EXPIRATION_MINUTES=tu_two_fa_expiration_minutes
+JWT_EXPIRES_IN=tu_jwt_expires_in
+JWT_REFRESH_EXPIRES_IN=tu_jwt_refresh_expires_in
 ```
 
 Ejecutar servidor:
@@ -61,13 +67,15 @@ cd my-tasks-front
 npm install
 ```
 
-Crea un archivo `.env` en `my-tasks-front/` (o usa las variables de entorno de Vite):
+Cambia el archvo `.env.example` a `.env` en `my-tasks-front/` (o usa las variables de entorno de Vite):
 
 ```env
-VITE_API_URL=http://localhost:3000/api
-VITE_EMAIL_JS_SERVICE_ID=service_id
-VITE_EMAIL_JS_TEMPLATE_ID=template_id
-VITE_EMAIL_JS_PUBLIC_KEY=public_key
+VITE_API_URL=tu_api_url
+VITE_ACCESS_KEY=tu_access_key
+VITE_EMAIL_CONTACT_URL=https://api.web3forms.com/submit
+VITE_TOKEN_STORAGE_KEY=tu_token_storage_key
+VITE_USER_STORAGE_KEY=tu_user_storage_key
+VITE_REFRESH_TOKEN_STORAGE_KEY=tu_refresh_token_storage_key
 ```
 
 Ejecutar cliente:
