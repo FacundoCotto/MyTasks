@@ -1,6 +1,0 @@
-[submodule "my-tasks-front"]
-	path = my-tasks-front
-	url = https://github.com/FacundoCotto/MyTasksFrontend/blob/dev/src/modules/tasks/components/CreatePageForm.tsx
-[submodule "my-tasks-backend"]
-	path = my-tasks-backend
-	url = https://github.com/FacundoCotto/MyTasksBackend
