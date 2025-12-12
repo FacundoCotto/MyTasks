@@ -28,7 +28,7 @@ cd my-tasks-backend
 npm install
 ```
 
-Cambia el archvo `.env.example` a `.env` en `my-tasks-backend/` con las siguientes variables:
+Cambia el archvo `.env.example` a `.env.dev` en `my-tasks-backend/` con las siguientes variables:
 
 ```env
 NODE_ENV=tu_node_env
