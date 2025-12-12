@@ -39,7 +39,7 @@ function AuthPage() {
             {authOptions.map((option) => (
               <Btn
                 key={option.key}
-                variant={activeView === option.key ? "active" : "inactive"}
+                variant={activeView === option.key ? "auth_active" : "auth_inactive"}
                 {...{
                   onClick: () => setActiveView(option.key),
                   type: "button",
